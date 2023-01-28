@@ -5,7 +5,7 @@
 #lbl {
     font-family: monospace;
     font-size: xx-large;
-    color: #626262;
+    color: #5D5D5D;
     padding: 5px;
     border: 1px solid #ececec;
     text-align: center;
@@ -40,18 +40,18 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
+    var date = dayOfWeek+" " + (today.getMonth()+1) + "/" + today.getDate() +'/'+today.getFullYear() ;
 
     var greet;
 
     if (hrs < 12)
-        greet = 'Good Morning~  ';
+        greet = '₍ᐢ..ᐢ₎ ~ Good Morning ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon~ ';
+        greet = '₍ᐢ..ᐢ₎ ~ Good Afternoon ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening~ ';
+        greet = '₍ᐢ..ᐢ₎ ~ Good Evening ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date">, ${date}</div>`;
+        greet+=`<div id="date"> ${date}</div>`;
 </script> 
 </html>
